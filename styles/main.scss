@@ -1,0 +1,15 @@
+
+
+@use 'vars' as v;
+@import 'mixin';
+@import 'styles';
+@import 'components';
+@import 'utils';
+
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@500;600;800&family=Red+Hat+Display:wght@900&display=swap');
+
+
+html,body{
+    height: 100%;
+}
+

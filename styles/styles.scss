@@ -1,0 +1,83 @@
+body,
+p {
+    font-family: 'Manrope';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 16px;
+
+}
+
+h1 {
+    font-family: 'Red Hat Display';
+    font-weight: 900;
+    font-size: 24px;
+    line-height: 28px;
+    text-transform: uppercase;
+
+}
+
+h2 {
+    font-family: 'Red Hat Display';
+    font-weight: 900;
+    font-size: 16px;
+    line-height: 21px;
+    text-transform: uppercase;
+}
+
+h3 {
+    font-family: 'Red Hat Display';
+    font-weight: 900;
+    font-size: 12px;
+    line-height: 16px;
+    text-transform: uppercase;
+}
+
+@include md {
+
+    body,
+    p {
+        font-size: 16px;
+        line-height: 22px;
+    }
+
+    h1 {
+        font-size: 60px;
+        line-height: 70px;
+    }
+
+    h2 {
+        font-size: 36px;
+        line-height: 48px;
+    }
+
+    h3 {
+        font-size: 24px;
+        line-height: 32px;
+    }
+
+}
+
+nav {
+    font-family: 'Red Hat Display';
+    font-style: normal;
+    font-weight: 900;
+    font-size: 14px;
+    line-height: 19px;
+    /* identical to box height */
+
+    text-transform: uppercase;
+}
+
+//********* themes *********//
+
+.bg-primary{
+    background-color: v.$primary;
+    color: v.$dark;
+}
+
+.bg-dark{
+    background-color: v.$dark;
+    color: v.$light1;
+}
+

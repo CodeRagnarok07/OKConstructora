@@ -1,0 +1,10 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.subrallado{
+    @apply transition ease-out duration-300 mt-1 -scale-50 group-hover:scale-x-100 group-hover:bg-[#FFCB1F] h-2 
+}
+.subrallado2{
+
+}

@@ -1,0 +1,89 @@
+.carrusel-slider {
+    // @extend .;
+    position: relative;
+
+
+    .slider {
+        display: flex;
+        flex-wrap: nowrap;
+        overflow: hidden;
+
+        scroll-behavior: smooth;
+        scroll-snap-type: x mandatory;
+
+        z-index: 10;
+        --grid:2;
+        --grid-md:1;
+
+        &.slider-grid {
+            /*visible items */
+            --n: attr(data-grid number);
+            --g: 0px;
+
+            z-index: 100;
+            display: grid;
+            grid-auto-flow: column;
+            grid-auto-columns: calc((100% - (var(--grid) - 1)*var(--g))/var(--grid));
+            grid-gap: var(--g);
+            overflow: hidden;
+
+            @media (min-width:768px) {
+                grid-auto-columns: calc((100% - (var(--grid-md) - 1)*var(--g))/var(--grid-md));
+
+            }
+            
+            &:nth-child(0){
+                height: 100%;
+                scroll-snap-align: start;
+                scroll-snap-stop: always;
+
+            }
+            img{
+                height: 100%;
+
+                object-fit: cover;
+                object-position: center;
+            }
+        }
+
+        .item-slider {
+            flex-shrink: 0;
+            scroll-snap-align: start;
+            width: 100%;
+        }
+    }
+
+
+
+    .dot-control {
+        display: flex;
+        justify-content: center;
+        gap: 16px;
+
+        div {
+            z-index: 50;
+            height: 8px;
+            width: 8px;
+            // border-radius: 50%;
+            cursor: pointer;
+            background-color: v.$light2;
+
+            &:hover,
+            &.active {
+                background-color: v.$primary;
+            }
+        }
+
+        @media (min-width:768px) {
+            padding-top: 0px;
+
+            div {
+                width: 12px;
+                height: 12px;
+            }
+        }
+    }
+
+
+
+}
