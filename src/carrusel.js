@@ -98,7 +98,11 @@
             dot_control_cont.appendChild(dot_control)
             console.log(dot_control_cont, dot_control);
         }
-        dot_control_cont.children[0].classList.add("active")
+
+        if(dot_control_cont.children[0]){
+
+            dot_control_cont.children[0].classList.add("active")
+        }
         renderCurretn()
     }
 })();

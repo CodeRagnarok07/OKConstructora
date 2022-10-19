@@ -32,6 +32,22 @@ h3 {
   text-transform: uppercase;
 }
 
+h4 {
+  font-family: "Red Hat Display";
+  font-style: normal;
+  font-weight: 900;
+  font-size: 12px;
+  line-height: 16px;
+}
+
+strong, .strong {
+  font-family: "Manrope";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 16px;
+}
+
 @media (min-width: 768px) {
   body,
 p {
@@ -49,6 +65,17 @@ p {
   h3 {
     font-size: 24px;
     line-height: 32px;
+  }
+  h4 {
+    font-size: 14px;
+    line-height: 19px;
+  }
+  strong, .strong {
+    font-family: "Manrope";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 16px;
   }
 }
 nav {
@@ -100,13 +127,14 @@ nav {
     grid-auto-columns: calc((100% - (var(--grid-md) - 1) * var(--g)) / var(--grid-md));
   }
 }
-.carrusel-slider .slider.slider-grid:nth-child(0) {
-  height: 100%;
+.carrusel-slider .slider.slider-grid > div {
+  width: 100%;
   scroll-snap-align: start;
   scroll-snap-stop: always;
 }
 .carrusel-slider .slider.slider-grid img {
   height: 100%;
+  width: 100%;
   object-fit: cover;
   object-position: center;
 }
@@ -152,8 +180,27 @@ nav {
   }
 }
 
-html, body {
+.social {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+html,
+body {
   height: 100%;
+}
+
+.galeria-nosotros > div {
+  height: 550px;
+}
+
+.footer ul li {
+  margin-bottom: 4px;
+}
+.footer ul li:first-child {
+  margin-bottom: 8px;
+  text-transform: uppercase;
 }
 
 /*# sourceMappingURL=styles.css.map */
