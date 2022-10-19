@@ -104,5 +104,9 @@
             dot_control_cont.children[0].classList.add("active")
         }
         renderCurretn()
+
+        setInterval(() => {
+            arrowControler(true)
+        }, 3000);
     }
 })();

@@ -189,6 +189,7 @@ nav {
 html,
 body {
   height: 100%;
+  color: #221F20;
 }
 
 .galeria-nosotros > div {
@@ -201,6 +202,36 @@ body {
 .footer ul li:first-child {
   margin-bottom: 8px;
   text-transform: uppercase;
+}
+
+input,
+textarea,
+.selection {
+  background-color: transparent;
+  outline: none;
+  padding: 1rem;
+  border: 3px solid #221F20;
+}
+input:hover, input:focus, input:target, input:active,
+textarea:hover,
+textarea:focus,
+textarea:target,
+textarea:active,
+.selection:hover,
+.selection:focus,
+.selection:target,
+.selection:active {
+  outline: none;
+  border: 3px solid #FFCB1F;
+}
+
+form {
+  gap: 1.5rem;
+}
+form .form-control {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
 }
 
 /*# sourceMappingURL=styles.css.map */

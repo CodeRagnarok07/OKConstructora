@@ -13,6 +13,8 @@ body {
     height: 100%;
 
     // scroll-behavior: smooth;
+
+    color: v.$black;
 }
 
 // 
@@ -28,7 +30,7 @@ body {
     ul {
 
         li {
-           
+
 
             &:first-child {
                 margin-bottom: 8px;
@@ -37,5 +39,41 @@ body {
 
             margin-bottom: 4px;
         }
+    }
+}
+
+
+// ****** CONTACT *********//
+
+
+input,
+textarea,
+.selection {
+    background-color: transparent;
+    outline: none;
+    padding: 1rem;
+    border: 3px solid v.$black;
+
+    &:hover,
+    &:focus,
+    &:target,
+    &:active {
+        outline: none;
+        border: 3px solid v.$primary;
+
+    }
+
+}
+
+form {
+
+    gap: 1.5rem;
+    .form-control {
+        
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+
+   
     }
 }
