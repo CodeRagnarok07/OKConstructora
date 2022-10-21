@@ -234,4 +234,44 @@ form .form-control {
   gap: 0.5rem;
 }
 
+.servicios {
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+}
+.servicios .serv-item {
+  display: flex;
+  flex-direction: column;
+}
+.servicios .serv-item .serv-text-box {
+  display: flex;
+  flex-direction: column;
+  margin-top: 1rem;
+}
+.servicios .serv-item .serv-text-box hr.top-line {
+  border: 2px solid #FFCB1F;
+  width: 30%;
+}
+@media (min-width: 780px) {
+  .servicios .serv-item {
+    flex-direction: row;
+    gap: 4rem;
+  }
+  .servicios .serv-item:nth-child(even) {
+    flex-direction: row-reverse;
+  }
+  .servicios .serv-item > div {
+    width: 100%;
+  }
+  .servicios .serv-item > div p {
+    width: 70%;
+  }
+  .servicios .serv-item .serv-text-box {
+    margin-top: 0rem;
+  }
+  .servicios .serv-item .serv-text-box hr.top-line {
+    border: 4px solid #FFCB1F;
+  }
+}
+
 /*# sourceMappingURL=styles.css.map */

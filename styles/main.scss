@@ -68,12 +68,74 @@ textarea,
 form {
 
     gap: 1.5rem;
+
     .form-control {
-        
+
         display: flex;
         flex-direction: column;
         gap: 0.5rem;
 
-   
+
     }
+}
+
+
+// ******* servicios ********** //
+
+.servicios {
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+
+    .serv-item {
+        display: flex;
+        flex-direction: column;
+
+        .serv-text-box {
+            display: flex;
+            flex-direction: column;
+
+            margin-top: 1rem;
+            // flex flex-col h-full w-full mt-4 md:mt-0
+
+            hr.top-line {
+                border: 2px solid v.$primary;
+                width: 30%;
+            }
+        }
+    }
+
+
+    @media (min-width:780px) {
+        .serv-item {
+            flex-direction: row;
+            gap: 4rem;
+
+
+            &:nth-child(even) {
+                flex-direction: row-reverse;
+
+            }
+
+            >div {
+                width: 100%;
+
+                p {
+                    width: 70%;
+
+                }
+            }
+
+            .serv-text-box {
+                margin-top: 0rem;
+
+                hr.top-line {
+                    border: 4px solid v.$primary;
+
+                }
+            }
+        }
+    }
+
+
 }
