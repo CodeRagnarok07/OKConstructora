@@ -25,40 +25,40 @@
         }
 
         // dot style
-        function setDoct() {
+        function setDoct(auto) {
             for (let dot of dot_control_cont.children) {
                 dot.className = ""
             }
-            dot_control_cont.children[current].classList.add("active")
+            if (auto) {
+                dot_control_cont.children[current + 1].classList.add("active")
+            } else {
+                dot_control_cont.children[current].classList.add("active")
+            }
             renderCurretn()
         }
-
 
 
         // arrow_controls
         function arrowControler(bol) {
             const widthSlider = slider.children[0].offsetWidth
             const cols = slider.offsetWidth / widthSlider
-            setTimeout(() => {
-                
-                if (bol == true) {
-                    current++
-                    if (current >= slider.children.length / cols) {
-                        slider.scrollLeft = 0
-                        current = 0
-                    } else {
-                        slider.scrollLeft += widthSlider * cols
-                    }
+            if (bol == true) {
+                current++
+                if (current >= slider.children.length / cols) {
+                    slider.scrollLeft = 0
+                    current = 0
                 } else {
-                    if (current < 1) {
-                        slider.scrollLeft = slider.children.length * widthSlider * cols
-                        current = slider.children.length - 1
-                    } else {
-                        slider.scrollLeft -= widthSlider * cols
-                        current = current - 1
-                    }
+                    slider.scrollLeft += widthSlider * cols
                 }
-            }, 500);
+            } else {
+                if (current < 1) {
+                    slider.scrollLeft = slider.children.length * widthSlider * cols
+                    current = slider.children.length - 1
+                } else {
+                    slider.scrollLeft -= widthSlider * cols
+                    current = current - 1
+                }
+            }
             setDoct()
             renderCurretn()
 
@@ -81,7 +81,7 @@
             const cols = slider.offsetWidth / widthSlider
 
             slider.scrollLeft = widthSlider * i * cols
-          
+
             current = i
             setDoct()
         }
@@ -99,14 +99,30 @@
             console.log(dot_control_cont, dot_control);
         }
 
-        if(dot_control_cont.children[0]){
+        if (dot_control_cont.children[0]) {
 
             dot_control_cont.children[0].classList.add("active")
         }
         renderCurretn()
 
+
+
+
+        function autoPlay() {
+            current = current + 1
+
+            const widthSlider = slider.children[0].offsetWidth
+            const cols = slider.offsetWidth / widthSlider
+            if (current >= slider.children.length / cols) {
+                slider.scrollLeft = 0
+                current = 0
+            } else {
+                slider.scrollLeft += widthSlider * cols
+            }
+            setDoct()
+        }
         setInterval(() => {
-            arrowControler(true)
-        }, 3000);
+            autoPlay()
+        }, 5000);
     }
 })();
