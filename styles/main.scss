@@ -99,6 +99,7 @@ form {
 
             hr.top-line {
                 border: 2px solid v.$primary;
+                background-color: v.$primary;
                 width: 30%;
             }
         }
@@ -110,10 +111,13 @@ form {
             flex-direction: row;
             gap: 4rem;
 
-
+            &.no-inter{
+                &:nth-child(even) {
+                    flex-direction: row;
+                }
+            }
             &:nth-child(even) {
                 flex-direction: row-reverse;
-
             }
 
             >div {

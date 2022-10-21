@@ -250,12 +250,16 @@ form .form-control {
 }
 .servicios .serv-item .serv-text-box hr.top-line {
   border: 2px solid #FFCB1F;
+  background-color: #FFCB1F;
   width: 30%;
 }
 @media (min-width: 780px) {
   .servicios .serv-item {
     flex-direction: row;
     gap: 4rem;
+  }
+  .servicios .serv-item.no-inter:nth-child(even) {
+    flex-direction: row;
   }
   .servicios .serv-item:nth-child(even) {
     flex-direction: row-reverse;
