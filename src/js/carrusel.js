@@ -110,7 +110,6 @@
 
         function autoPlay() {
             current = current + 1
-
             const widthSlider = slider.children[0].offsetWidth
             const cols = slider.offsetWidth / widthSlider
             if (current >= slider.children.length / cols) {
@@ -121,6 +120,9 @@
             }
             setDoct()
         }
+
+        
+
         setInterval(() => {
             autoPlay()
         }, 5000);
