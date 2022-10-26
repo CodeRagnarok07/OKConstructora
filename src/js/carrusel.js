@@ -120,11 +120,10 @@
             }
             setDoct()
         }
-
-        
-
-        setInterval(() => {
-            autoPlay()
-        }, 5000);
+        if(carrusel_slider.classList.contains("no-auto") == false){
+            setInterval(() => {
+                autoPlay()
+            }, 5000);
+        }
     }
 })();
