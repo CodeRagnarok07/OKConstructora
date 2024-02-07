@@ -1,4 +1,4 @@
-# [OkConstructor](https://okconstructora.com/)
+# [OkConstructora](https://okconstructora.com/)
 
 OkConstructora es una empresa líder en el sector de la construcción encargada **Brindar atención personalizada y asesoramiento profesional de alta calidad para la ejecución de obras civiles, industriales y comerciales.**
 
